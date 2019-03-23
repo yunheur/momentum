@@ -9,7 +9,7 @@ const saveName = (text) => {
   localStorage.setItem(USER_LS, text);
 }
 
-const handleSubmit = (event) => {
+handleSubmit = (event) => {
   event.preventDefault();
   const currentValue = input.value;
   patingGreeting(currentValue);
