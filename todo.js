@@ -4,7 +4,7 @@ const todoFormEl = document.querySelector('.todo-form'),
 
 const TODOLIST_LS = "todoList";
 
-const todos = [];
+let todos = [];
 
 const saveTodos = () => {
   localStorage.setItem(TODOLIST_LS, JSON.stringify(todos));
@@ -17,6 +17,7 @@ const deleteTodo = (event) => {
   const cleanTodos = todos.filter((todo) => {
     return todo.id !== parseInt(liEl.id);
   })
+  todos = cleanTodos;
   saveTodos();
 }
 
